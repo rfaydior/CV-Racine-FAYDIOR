@@ -1006,7 +1006,7 @@ export default function App() {
 
       {/* FOOTER */}
       <footer className="bg-black text-slate-400 py-12 px-6 rounded-t-5xl md:rounded-t-6xl border-t border-tech-border relative">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-xs font-mono">
+        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 text-xs font-mono text-center">
           <div className="flex items-center gap-3">
             <div className="w-7 h-7 rounded-full bg-signal-blue flex items-center justify-center font-bold text-white text-xs">
               RF
@@ -1016,16 +1016,12 @@ export default function App() {
             </div>
           </div>
 
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-tech-surface border border-tech-border text-[11px] text-slate-300">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-tech-surface border border-tech-border text-[11px] text-slate-300 shadow-inner">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
             <span>SYSTÈME EN LIGNE • LATENCE OPTIQUE MINIMALE</span>
-          </div>
-
-          <div className="text-tech-muted text-center md:text-right">
-            Conçu avec le <em>vibe coding</em> • React 19 & GSAP Engine
           </div>
         </div>
       </footer>
