@@ -820,18 +820,6 @@ export default function App() {
               </div>
             </div>
 
-            <div className="p-6 rounded-4xl bg-tech-card border border-tech-border card-lift flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-              <div>
-                <span className="inline-block px-3 py-1 rounded-full font-mono text-xs text-slate-300 bg-tech-surface border border-tech-border mb-2">
-                  2005 — 2008
-                </span>
-                <h3 className="text-lg font-bold text-white font-sans">Premier Cycle d'Étude Médicale & Stages Hospitaliers</h3>
-                <p className="text-sm text-slate-400 mt-1 font-sans">Hôpital Universitaire de Fann (2007-2008) & Hôpital Le Dantec (2006-2007), Dakar</p>
-              </div>
-              <div className="sm:text-right font-mono text-xs text-slate-400">
-                Médecine & Santé
-              </div>
-            </div>
 
             <div className="p-6 rounded-4xl bg-tech-card border border-tech-border card-lift flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div>
