@@ -121,38 +121,40 @@
 <body class="bg-tech-black text-slate-100 font-sans selection:bg-signal-blue selection:text-white relative bg-noise antialiased overflow-x-hidden">
 
   <!-- ========================================================================= -->
-  <!-- NAVBAR : La Signature Flottante (Pilule morphing avec IntersectionObserver) -->
+  <!-- NAVBAR : La Signature Flottante (Élargie & Parfaitement Centrée) -->
   <!-- ========================================================================= -->
-  <header class="fixed top-5 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
-    <nav id="navbar" class="pointer-events-auto flex items-center justify-between gap-4 md:gap-8 px-5 py-3 rounded-full border border-tech-border/80 bg-tech-surface/70 backdrop-blur-xl transition-all duration-300 shadow-2xl max-w-4xl w-full">
+  <header class="fixed top-5 left-0 right-0 z-50 flex justify-center px-4 sm:px-6 pointer-events-none">
+    <nav id="navbar" class="pointer-events-auto flex items-center justify-between gap-4 lg:gap-8 px-6 py-3.5 rounded-full border border-tech-border/80 bg-tech-surface/80 backdrop-blur-xl transition-all duration-300 shadow-2xl max-w-6xl w-full">
       
-      <!-- Identité / Logo -->
-      <a href="#hero" class="flex items-center gap-3 group">
-        <div class="w-9 h-9 rounded-full bg-signal-blue flex items-center justify-center font-bold text-white text-sm tracking-wider shadow-md group-hover:scale-105 transition-transform">
-          RF
-        </div>
-        <div class="flex flex-col">
-          <span class="font-bold text-sm tracking-tight text-white group-hover:text-signal-glow transition-colors">Racine FAYDIOR</span>
-          <span class="font-mono text-[10px] text-tech-muted tracking-wider">CHEF DE POLE TELECOM</span>
-        </div>
-      </a>
-
-      <!-- Liens Navigation Desktop -->
-      <div class="hidden md:flex items-center gap-6 text-xs font-mono tracking-wider text-slate-300">
-        <a href="#about" class="hover:text-signal-glow transition-colors">À PROPOS</a>
-        <a href="#experience" class="hover:text-signal-glow transition-colors">PARCOURS</a>
-        <a href="#skills" class="hover:text-signal-glow transition-colors">COMPÉTENCES</a>
-        <a href="#education" class="hover:text-signal-glow transition-colors">FORMATION</a>
-        <a href="#contact" class="hover:text-signal-glow transition-colors">CONTACT</a>
+      <!-- Identité / Logo (Gauche, shrink-0) -->
+      <div class="flex items-center shrink-0">
+        <a href="#hero" class="flex items-center gap-3 group">
+          <div class="w-9 h-9 rounded-full bg-signal-blue flex items-center justify-center font-bold text-white text-sm tracking-wider shadow-md group-hover:scale-105 transition-transform shrink-0">
+            RF
+          </div>
+          <div class="flex flex-col">
+            <span class="font-bold text-sm tracking-tight text-white group-hover:text-signal-glow transition-colors whitespace-nowrap">Racine FAYDIOR</span>
+            <span class="font-mono text-[10px] text-tech-muted tracking-wider whitespace-nowrap hidden sm:block">CHEF DE POLE TELECOM</span>
+          </div>
+        </a>
       </div>
 
-      <!-- Actions rapides -->
-      <div class="flex items-center gap-2">
-        <a href="CV Racine FAYDIOR.pdf" download="CV_Racine_FAYDIOR.pdf" class="btn-magnetic flex items-center gap-2 bg-signal-blue hover:bg-signal-light text-white font-mono text-xs px-4 py-2 rounded-full shadow-lg transition-all">
+      <!-- Liens Navigation Desktop (Centre parfait, flex-1 justify-center) -->
+      <div class="hidden md:flex items-center justify-center flex-1 gap-5 lg:gap-8 text-xs font-mono tracking-wider text-slate-300">
+        <a href="#about" class="hover:text-signal-glow transition-colors whitespace-nowrap">À PROPOS</a>
+        <a href="#experience" class="hover:text-signal-glow transition-colors whitespace-nowrap">PARCOURS</a>
+        <a href="#skills" class="hover:text-signal-glow transition-colors whitespace-nowrap">COMPÉTENCES</a>
+        <a href="#education" class="hover:text-signal-glow transition-colors whitespace-nowrap">FORMATION</a>
+        <a href="#contact" class="hover:text-signal-glow transition-colors whitespace-nowrap">CONTACT</a>
+      </div>
+
+      <!-- Actions rapides (Droite, shrink-0) -->
+      <div class="flex items-center gap-2.5 shrink-0">
+        <a href="CV Racine FAYDIOR.pdf" download="CV_Racine_FAYDIOR.pdf" class="btn-magnetic flex items-center gap-2 bg-signal-blue hover:bg-signal-light text-white font-mono text-xs px-4 py-2 rounded-full shadow-lg transition-all whitespace-nowrap">
           <i data-lucide="download" class="w-3.5 h-3.5"></i>
           <span class="hidden sm:inline">CV PDF</span>
         </a>
-        <a href="#contact" class="btn-magnetic border border-slate-700 hover:border-signal-blue text-slate-200 font-mono text-xs px-3.5 py-2 rounded-full transition-all">
+        <a href="#contact" class="btn-magnetic border border-slate-700 hover:border-signal-blue text-slate-200 font-mono text-xs px-4 py-2 rounded-full transition-all whitespace-nowrap">
           <i data-lucide="mail" class="w-3.5 h-3.5 sm:hidden"></i>
           <span class="hidden sm:inline">Contact</span>
         </a>
@@ -1130,11 +1132,11 @@
       const navbar = document.getElementById("navbar");
       window.addEventListener("scroll", () => {
         if (window.scrollY > 80) {
-          navbar.classList.add("bg-tech-surface/90", "py-2.5", "shadow-signal-blue/10", "border-signal-blue/40");
-          navbar.classList.remove("py-3");
+          navbar.classList.add("bg-tech-surface/95", "py-2.5", "shadow-signal-blue/10", "border-signal-blue/40");
+          navbar.classList.remove("py-3.5", "bg-tech-surface/80");
         } else {
-          navbar.classList.remove("bg-tech-surface/90", "py-2.5", "shadow-signal-blue/10", "border-signal-blue/40");
-          navbar.classList.add("py-3");
+          navbar.classList.remove("bg-tech-surface/95", "py-2.5", "shadow-signal-blue/10", "border-signal-blue/40");
+          navbar.classList.add("py-3.5", "bg-tech-surface/80");
         }
       });
 

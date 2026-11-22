@@ -131,48 +131,52 @@ export default function App() {
   return (
     <div ref={compRef} className="bg-tech-black text-slate-100 font-sans selection:bg-signal-blue selection:text-white relative bg-noise antialiased overflow-x-hidden min-h-screen">
       
-      {/* NAVBAR : La Signature Flottante */}
-      <header className="fixed top-5 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
+      {/* NAVBAR : La Signature Flottante (Élargie & Parfaitement Centrée) */}
+      <header className="fixed top-5 left-0 right-0 z-50 flex justify-center px-4 sm:px-6 pointer-events-none">
         <nav
-          className={`pointer-events-auto flex items-center justify-between gap-4 md:gap-8 px-5 py-3 rounded-full border border-tech-border/80 backdrop-blur-xl transition-all duration-300 shadow-2xl max-w-4xl w-full ${
-            scrolled ? 'bg-tech-surface/90 py-2.5 shadow-signal-blue/10 border-signal-blue/40' : 'bg-tech-surface/70 py-3'
+          className={`pointer-events-auto flex items-center justify-between gap-4 lg:gap-8 px-6 py-3.5 rounded-full border border-tech-border/80 backdrop-blur-xl transition-all duration-300 shadow-2xl max-w-6xl w-full ${
+            scrolled ? 'bg-tech-surface/95 py-2.5 shadow-signal-blue/10 border-signal-blue/40' : 'bg-tech-surface/80 py-3.5'
           }`}
         >
-          {/* Identité / Logo */}
-          <a href="#hero" className="flex items-center gap-3 group">
-            <div className="w-9 h-9 rounded-full bg-signal-blue flex items-center justify-center font-bold text-white text-sm tracking-wider shadow-md group-hover:scale-105 transition-transform">
-              RF
-            </div>
-            <div className="flex flex-col">
-              <span className="font-bold text-sm tracking-tight text-white group-hover:text-signal-glow transition-colors">
-                Racine FAYDIOR
-              </span>
-              <span className="font-mono text-[10px] text-tech-muted tracking-wider">CHEF DE POLE TELECOM</span>
-            </div>
-          </a>
-
-          {/* Liens Desktop */}
-          <div className="hidden md:flex items-center gap-6 text-xs font-mono tracking-wider text-slate-300">
-            <a href="#about" className="hover:text-signal-glow transition-colors">À PROPOS</a>
-            <a href="#experience" className="hover:text-signal-glow transition-colors">PARCOURS</a>
-            <a href="#skills" className="hover:text-signal-glow transition-colors">COMPÉTENCES</a>
-            <a href="#education" className="hover:text-signal-glow transition-colors">FORMATION</a>
-            <a href="#contact" className="hover:text-signal-glow transition-colors">CONTACT</a>
+          {/* Identité / Logo (Gauche, shrink-0) */}
+          <div className="flex items-center shrink-0">
+            <a href="#hero" className="flex items-center gap-3 group">
+              <div className="w-9 h-9 rounded-full bg-signal-blue flex items-center justify-center font-bold text-white text-sm tracking-wider shadow-md group-hover:scale-105 transition-transform shrink-0">
+                RF
+              </div>
+              <div className="flex flex-col">
+                <span className="font-bold text-sm tracking-tight text-white group-hover:text-signal-glow transition-colors whitespace-nowrap">
+                  Racine FAYDIOR
+                </span>
+                <span className="font-mono text-[10px] text-tech-muted tracking-wider whitespace-nowrap hidden sm:block">
+                  CHEF DE POLE TELECOM
+                </span>
+              </div>
+            </a>
           </div>
 
-          {/* Actions rapides */}
-          <div className="flex items-center gap-2">
+          {/* Liens Navigation Desktop (Centre parfait, flex-1 justify-center) */}
+          <div className="hidden md:flex items-center justify-center flex-1 gap-5 lg:gap-8 text-xs font-mono tracking-wider text-slate-300">
+            <a href="#about" className="hover:text-signal-glow transition-colors whitespace-nowrap">À PROPOS</a>
+            <a href="#experience" className="hover:text-signal-glow transition-colors whitespace-nowrap">PARCOURS</a>
+            <a href="#skills" className="hover:text-signal-glow transition-colors whitespace-nowrap">COMPÉTENCES</a>
+            <a href="#education" className="hover:text-signal-glow transition-colors whitespace-nowrap">FORMATION</a>
+            <a href="#contact" className="hover:text-signal-glow transition-colors whitespace-nowrap">CONTACT</a>
+          </div>
+
+          {/* Actions rapides (Droite, shrink-0) */}
+          <div className="flex items-center gap-2.5 shrink-0">
             <a
               href="CV Racine FAYDIOR.pdf"
               download="CV_Racine_FAYDIOR.pdf"
-              className="btn-magnetic flex items-center gap-2 bg-signal-blue hover:bg-signal-light text-white font-mono text-xs px-4 py-2 rounded-full shadow-lg transition-all"
+              className="btn-magnetic flex items-center gap-2 bg-signal-blue hover:bg-signal-light text-white font-mono text-xs px-4 py-2 rounded-full shadow-lg transition-all whitespace-nowrap"
             >
               <Download className="w-3.5 h-3.5" />
               <span className="hidden sm:inline">CV PDF</span>
             </a>
             <a
               href="#contact"
-              className="btn-magnetic border border-slate-700 hover:border-signal-blue text-slate-200 font-mono text-xs px-3.5 py-2 rounded-full transition-all"
+              className="btn-magnetic border border-slate-700 hover:border-signal-blue text-slate-200 font-mono text-xs px-4 py-2 rounded-full transition-all whitespace-nowrap"
             >
               <Mail className="w-3.5 h-3.5 sm:hidden" />
               <span className="hidden sm:inline">Contact</span>
